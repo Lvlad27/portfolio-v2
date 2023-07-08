@@ -6,19 +6,19 @@ module.exports = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        custom: ["BBC-Reith-Sans"],
+      },
+    },
     colors: {
-      "color-1": "#272727",
-      "color-2": "#202020",
-      "color-3": "#feda4e",
-      "color-4": "#a6a6a6",
-      "color-5": "#241f0b",
-      "color-6": "#f4f4f4",
+      text: "#f8fafc",
+      background: "#10181e",
+      primary: "#b2c32c",
+      secondary: "#18261d",
+      accent: "#1aafea",
     },
-    fontFamily: {
-      sans: ["", ""],
-      serif: ["", ""],
-    },
+    screens: {},
   },
   plugins: [],
 };
