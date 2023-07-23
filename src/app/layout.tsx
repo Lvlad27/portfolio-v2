@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import '../globals.css';
+import './globals.css';
 
 export const metadata: Metadata = {
   title: 'Vlad Leontescu',
@@ -13,7 +13,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="font-primary bg-background text-text">{children}</body>
+      <body className="font-bbc bg-bunker-950 text-catskill-white-50">
+        {children}
+      </body>
     </html>
   );
 }
