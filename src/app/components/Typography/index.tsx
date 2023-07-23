@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { ElementType, ReactNode } from 'react';
 import {
   TYPOGRAPHY_VARIANTS,
   TYPOGRAPHY_COLOR_VARIANTS,
@@ -9,6 +9,7 @@ interface TypographyProps {
   variant?: keyof typeof TYPOGRAPHY_VARIANTS;
   color?: keyof typeof TYPOGRAPHY_COLOR_VARIANTS;
   className?: string;
+  as?: ElementType;
 }
 
 const Typography = ({
@@ -16,20 +17,16 @@ const Typography = ({
   color = 'primary',
   className,
   children,
+  as: Component = 'p',
 }: TypographyProps) => {
-  const SemanticComponent =
-    variant === 'body1' || variant === 'body2' || variant === 'caption' || variant==='subtitle1' || variant === 'subtitle2'
-      ? 'p'
-      : variant;
-
   return (
-    <SemanticComponent
+    <Component
       className={`${TYPOGRAPHY_VARIANTS[variant]} ${
         TYPOGRAPHY_COLOR_VARIANTS[color]
       } ${className || ''}`}
     >
       {children}
-    </SemanticComponent>
+    </Component>
   );
 };
 
