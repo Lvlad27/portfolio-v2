@@ -17,9 +17,20 @@ const Typography = ({
   className,
   children,
 }: TypographyProps) => {
-  const classes = `${TYPOGRAPHY_VARIANTS[variant]} ${TYPOGRAPHY_COLOR_VARIANTS[color]} ${className}`;
+  const SemanticComponent =
+    variant === 'body1' || variant === 'body2' || variant === 'caption' || variant==='subtitle1' || variant === 'subtitle2'
+      ? 'p'
+      : variant;
 
-  return <p className={classes}>{children}</p>;
+  return (
+    <SemanticComponent
+      className={`${TYPOGRAPHY_VARIANTS[variant]} ${
+        TYPOGRAPHY_COLOR_VARIANTS[color]
+      } ${className || ''}`}
+    >
+      {children}
+    </SemanticComponent>
+  );
 };
 
 export default Typography;
