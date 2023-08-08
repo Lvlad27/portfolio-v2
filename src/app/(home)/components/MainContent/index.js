@@ -1,4 +1,5 @@
 import AboutSection from '@src/app/(home)/components/MainContent/components/About';
+import Experience from '@src/app/(home)/components/MainContent/components/Experience';
 import { HOME_PAGE } from '@src/app/(home)/constants';
 
 export default function MainContent() {
@@ -7,7 +8,7 @@ export default function MainContent() {
   return (
     <main className="font-primary mt-24">
       <AboutSection />
-      {/* <Experience /> */}
+      <Experience />
     </main>
   );
 }
