@@ -6,7 +6,7 @@ export default function MainContent() {
   const { title, p1, p2, p3 } = HOME_PAGE.section_2;
 
   return (
-    <main className="font-primary mt-24">
+    <main className="font-primary mt-24 flex flex-col gap-y-16">
       <AboutSection />
       <Experience />
     </main>

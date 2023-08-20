@@ -8,6 +8,12 @@
   --background-end-rgb: 255, 255, 255;
 }
 
+@layer base {
+  a {
+    @apply text-atlantis-400;
+  }
+}
+
 @font-face {
   font-family: 'BBC-Reith-Sans';
   src: url('/fonts/BBCReithSans_W_Rg.woff2') format('woff2');

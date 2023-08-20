@@ -10,7 +10,7 @@ export const TYPOGRAPHY_VARIANTS = {
 };
 
 export const TYPOGRAPHY_COLOR_VARIANTS = {
-  primary: 'text-catskill-white-50',
-  secondary: 'text-catskill-white-300',
+  primary: 'text-catskill-white-300',
+  secondary: 'text-catskill-white-50',
   accent: 'text-picton-blue-500',
 };

@@ -1,25 +1,40 @@
 import Typography from '@src/app/components/Typography';
 import { HOME_PAGE } from '@src/app/(home)/constants';
+import SocialIcon from '@src/app/components/SocialIcon';
+import CustomLink from '@src/app/components/CustomLink';
+import GithubIcon from '@public/images/GithubIcon';
+import LinkedinIcon from '@public/images/LinkedinIcon';
 
-export default function Header() {
-  const { title, subtitle, description } = HOME_PAGE.header;
+const Header = () => {
+  const { title, subtitle, description, githubUrl, linkedinUrl } =
+    HOME_PAGE.header;
 
   return (
     <header className="text-left">
       <Typography
         as="h1"
+        color="secondary"
         variant="title"
-        color="primary"
         className="font-saira"
       >
         {title}
       </Typography>
-      <Typography as="h2" variant="subtitle1Regular" color="primary">
-        {subtitle}
-      </Typography>
-      <Typography variant="body1" color="secondary" className="mt-4">
-        {description}
-      </Typography>
+      <div className="flex flex-col gap-y-4">
+        <Typography as="h2" color="secondary" variant="subtitle1Regular">
+          {subtitle}
+        </Typography>
+        <Typography>{description}</Typography>
+        <ul className="flex space-x-3">
+          <li>
+            <SocialIcon icon={<GithubIcon />} href={githubUrl} />
+          </li>
+          <li>
+            <SocialIcon icon={<LinkedinIcon />} href={linkedinUrl} />
+          </li>
+        </ul>
+      </div>
     </header>
   );
-}
+};
+
+export default Header;
